@@ -3,7 +3,8 @@ var app = express();
 
 app.use(express.static('dist',{
     setHeaders: function (res) {
-        res.setHeader('Access-Control-Allow-Origin', '*')
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Cache-Control', '');
     }
 }));
 
